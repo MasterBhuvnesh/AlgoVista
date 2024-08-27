@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>AlgoVista</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!--     DON'T TOUCH THIS        -->
+  <header class="text-gray-600 body-font">
+    <div
+      class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+    >
+      <a
+        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      >
+        <!--  LOGO CAN BE CHANGE LATER  -->
+        <svg
+          width="18px"
+          height="18px"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="#030303"
+        >
+          <path
+            d="M14.2718 10.445L18 2M9.31612 10.6323L5 2M12.7615 10.0479L8.835 2M14.36 2L13.32 4.5M6 16C6 19.3137 8.68629 22 12 22C15.3137 22 18 19.3137 18 16C18 12.6863 15.3137 10 12 10C8.68629 10 6 12.6863 6 16Z"
+            stroke="#030303"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M10.5 15L12.5 13.5V18.5"
+            stroke="#030303"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <span class="ml-3 text-xl">AlgoVista</span>
+      </a>
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <!-- ADD LINKS TO NAVIGATE WELL ADD IT LATER ON ......   -->
+        <a class="mr-5 hover:text-gray-900">Searching </a>
+        <a class="mr-5 hover:text-gray-900">Hashing</a>
+        <a class="mr-5 hover:text-gray-900">Stack</a>
+        <a class="mr-5 hover:text-gray-900">Linked List </a>
+        <a class="mr-5 hover:text-gray-900">Graph's</a>
+      </nav>
+    </div>
+  </header>
+  <!--                          -->
+
+  <body>
+    <!-- NAV BAR -->
+    <div class="navbar">
+      <div class="logo">Graph's</div>
+      <div class="links">
+        <a href="Aim.html">Aim</a>
+        <a href="./Overview.html">Overview </a>
+        <a
+          href="./Basic.html"
+          class="active"
+          >Basic of Graph</a
+        >
+        <a href="./Implementation.html">Implementation</a>
+        <a href="./Traversal.html">Traversal</a>
+        <a href="./Cycle.html">Cycle Detection</a>
+        <a href="./Graphical.html">Graphical Rep<sup>n</sup></a>
+        <a href="./uses.html">Uses</a>
+        <a href="./Doc.html">Doc</a>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+      <h1>Basic of Graph</h1>
+
+      <!-- YouTube Video Embed -->
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/0sQE8zKhad0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>Introduction to Graphs</h2>
+      <p>
+        A graph is a non-linear data structure consisting of vertices (nodes)
+        and edges. The fundamental components of a graph are:
+      </p>
+      <ul>
+        <li><strong>Vertex (Node):</strong> A point or object in the graph.</li>
+        <li><strong>Edge:</strong> A connection between two vertices.</li>
+      </ul>
+      <p>
+        Graphs are non-linear because they allow multiple paths between
+        vertices, unlike linear data structures such as arrays or linked lists.
+      </p>
+
+      <h2>Types of Graphs</h2>
+      <h3>Directed Graphs (Digraphs)</h3>
+      <p>
+        In a directed graph, each edge has a direction, going from one vertex to
+        another. This direction is typically represented by an arrow. Directed
+        graphs are used in scenarios such as:
+      </p>
+      <ul>
+        <li>
+          <strong>Task Scheduling:</strong> Tasks are vertices, and dependencies
+          are directed edges.
+        </li>
+        <li>
+          <strong>Web Page Link Analysis:</strong> Web pages are vertices, and
+          hyperlinks are directed edges.
+        </li>
+      </ul>
+
+      <h3>Undirected Graphs</h3>
+      <p>
+        In an undirected graph, edges have no direction. The connection between
+        two vertices is bidirectional. Undirected graphs are commonly used in:
+      </p>
+      <ul>
+        <li>
+          <strong>Social Networks:</strong> Relationships between individuals
+          are bidirectional.
+        </li>
+        <li>
+          <strong>Network Topologies:</strong> Computer networks where
+          connections are mutual.
+        </li>
+      </ul>
+
+      <h2>Graph Terminology</h2>
+      <ul>
+        <li>
+          <strong>Path:</strong> A sequence of edges connecting a series of
+          vertices. For example, in a graph representing a city map, a path
+          could represent a route from one location to another.
+        </li>
+        <li>
+          <strong>Loop:</strong> An edge that connects a vertex to itself. In a
+          network, this might represent a feedback loop or self-referencing
+          connection.
+        </li>
+        <li>
+          <strong>Degree:</strong> The number of edges incident to a vertex. In
+          social networks, the degree of a vertex could represent the number of
+          friends an individual has.
+        </li>
+        <li>
+          <strong>Cycle:</strong> A path that starts and ends at the same vertex
+          without repeating any edge. In logistics, cycles might represent
+          routes that return to the starting point.
+        </li>
+        <li>
+          <strong>Connected Graph:</strong> A graph where there is a path
+          between any pair of vertices. Useful in scenarios like ensuring all
+          nodes in a network are reachable.
+        </li>
+        <li>
+          <strong>Complete Graph:</strong> A graph in which every pair of
+          distinct vertices is connected by a unique edge. This is used in
+          scenarios requiring maximum connectivity, like communication networks.
+        </li>
+        <li>
+          <strong>Weighted Graph:</strong> A graph where edges have weights
+          representing values such as distance or cost. Used in routing
+          problems, like finding the shortest path in a map.
+        </li>
+        <li>
+          <strong>Simple Graph:</strong> A graph without loops or multiple edges
+          between the same pair of vertices. Simple graphs are often used in
+          theoretical studies and algorithms.
+        </li>
+      </ul>
+
+      <h2>Graph Representations</h2>
+      <p>
+        Graphs can be represented in various ways, each with its own advantages:
+      </p>
+      <ul>
+        <li>
+          <strong>Adjacency Matrix:</strong> A 2D array where each cell at index
+          (i, j) represents the presence or weight of an edge from vertex i to
+          vertex j.
+        </li>
+        <li>
+          <strong>Adjacency List:</strong> An array where each vertex points to
+          a list of adjacent vertices. This representation is more
+          space-efficient for sparse graphs.
+        </li>
+      </ul>
+      <p>
+        In this tutorial, we'll use the Adjacency Matrix representation for
+        simplicity and broad applicability. You'll learn how to implement it on
+        the next page.
+      </p>
+    </div>
+  </body>
+</html>
