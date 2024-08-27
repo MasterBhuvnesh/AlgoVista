@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>AlgoVista</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!--     DON'T TOUCH THIS        -->
+  <header class="text-gray-600 body-font">
+    <div
+      class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+    >
+      <a
+        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      >
+        <!--  LOGO CAN BE CHANGE LATER  -->
+        <svg
+          width="18px"
+          height="18px"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="#030303"
+        >
+          <path
+            d="M14.2718 10.445L18 2M9.31612 10.6323L5 2M12.7615 10.0479L8.835 2M14.36 2L13.32 4.5M6 16C6 19.3137 8.68629 22 12 22C15.3137 22 18 19.3137 18 16C18 12.6863 15.3137 10 12 10C8.68629 10 6 12.6863 6 16Z"
+            stroke="#030303"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M10.5 15L12.5 13.5V18.5"
+            stroke="#030303"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <span class="ml-3 text-xl">AlgoVista</span>
+      </a>
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <!-- ADD LINKS TO NAVIGATE WELL ADD IT LATER ON ......   -->
+        <a class="mr-5 hover:text-gray-900">Searching </a>
+        <a class="mr-5 hover:text-gray-900">Hashing</a>
+        <a class="mr-5 hover:text-gray-900">Stack</a>
+        <a class="mr-5 hover:text-gray-900">Linked List </a>
+        <a class="mr-5 hover:text-gray-900">Graph's</a>
+      </nav>
+    </div>
+  </header>
+  <!--                          -->
+
+  <body>
+    <!-- NAV BAR -->
+    <div class="navbar">
+      <div class="logo">Linked list's</div>
+      <div class="links">
+        <a href="Aim.html">Aim</a>
+        <a href="./Overview.html">Overview </a>
+        <a
+          href="./Basic.html"
+          class="active"
+          >Basic of Linked list</a
+        >
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+      <h1>Basic of Linked List</h1>
+
+      <!-- YouTube Video Embed -->
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/odW9FU8jPRQ?si=o4JhrY32xKVSimCp"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>Introduction to Linked List</h2>
+      <p>
+        A linked list is a linear data structure that consists of a series of
+        nodes connected by pointers or references. Each node contains data and a
+        pointer/reference to the next node in the list. The fundamental
+        components of a LLinked list are:
+      </p>
+      <ul>
+        <li><strong>Data Node:</strong> For storing the data.</li>
+        <li>
+          <strong>Pointer Node:</strong>This will Points to next Data node.
+        </li>
+      </ul>
+      <p>
+        A linked list is a fundamental data structure in computer science. It
+        mainly allows efficient insertion and deletion operations compared to
+        arrays. Like arrays, it is also used to implement other data structures
+        like stack, queue and deque.
+      </p>
+
+      <h2>Types of Linked List</h2>
+      <h3 style="font-weight: 800">Singly linked List</h3>
+      <p>
+        The node contains a pointer to the next node means that the node stores
+        the address of the next node in the sequence. A single linked list
+        allows the traversal of data only in one way. Here are some of the key
+        applications of singly linked lists:
+      </p>
+      <ul>
+        <li>
+          <strong>Implementing Stacks and Queues:</strong> Singly linked lists
+          can be used to efficiently implement both stack and queue data
+          structures.
+        </li>
+        <li>
+          <strong>Navigation in Web Browsers:</strong> Singly linked lists can
+          be used to store the browsing history in web browsers, allowing users
+          to navigate back and forth through visited web pages.
+        </li>
+      </ul>
+      <br />
+      <h3 style="font-weight: 800">Doubly Linked List</h3>
+      <p>
+        A doubly linked list or a two-way linked list is a more complex type of
+        linked list that contains a pointer to the next as well as the previous
+        node in sequence. Doubly Linked List are commonly used in:
+      </p>
+      <ul>
+        <li>
+          <strong>Navigation Systems:</strong> Doubly linked lists are useful in
+          navigation systems where forward and backward navigation is required.
+        </li>
+        <li>
+          <strong>Game Development:</strong> Doubly linked lists can be used in
+          games, such as a deck of cards, where the ability to move forwards and
+          backwards through the data is important.
+        </li>
+      </ul>
+      <br />
+      <h3 style="font-weight: 800">Circular Linked List</h3>
+      <p>
+        A circular linked list is that in which the last node contains the
+        pointer to the first node of the list. Circular Linked List are commonly
+        used in:
+      </p>
+      <ul>
+        <li>
+          <strong>Process queues:</strong> Circular linked lists can be used to
+          maintain a queue of processes, where each process gets a turn in a
+          cyclic order.
+        </li>
+        <li>
+          <strong>Scheduling and managing playlists:</strong>Circular linked
+          lists are especially helpful for tasks like scheduling and managing
+          playlists, allowing for seamless navigation through the list.
+        </li>
+      </ul>
+      <br />
+      <h3 style="font-weight: 800">Circular Doubly Linked List</h3>
+      <p>
+        A circular doubly linked list is defined as a circular linked list in
+        which each node has two links connecting it to the previous node and the
+        next node. Circular doubly Linked List are commonly used in:
+      </p>
+      <ul>
+        <li>
+          <strong>Data manipulation:</strong>Circular doubly linked lists allow
+          for movement in both directions, which can increase flexibility.
+        </li>
+        <li>
+          <strong>Repetitive tasks:</strong>The circular structure of the list
+          makes it a natural fit for repetitive tasks.
+        </li>
+      </ul>
+
+      <h2>Advantages of Linked Lists</h2>
+      <ul style="list-style: circle">
+        <li>
+          Linked Lists are mostly used because of their effective insertion and
+          deletion. We only need to change few pointers (or references) to
+          insert (or delete) an item in the middle
+        </li>
+        <li>
+          Insertion and deletion at any point in a linked list take O(1) time.
+          Whereas in an array data structure, insertion / deletion in the middle
+          takes O(n) time
+        </li>
+        <li>
+          This data structure is simple and can be also used to implement a
+          stack, queues, and other abstract data structures.
+        </li>
+        <li>
+          Implementation of Queue and Deque data structures : Simple array
+          implementation is not efficient at all. We must use circular array to
+          efficiently implement which is complex. But with linked list, it is
+          easy and straightforward. That is why most of the language libraries
+          use Linked List internally to implement these data structures..
+        </li>
+        <li>
+          Linked List might turn out to be more space efficient compare to
+          arrays in cases where we cannot guess the number of elements in
+          advance. In case of arrays, the whole memory for items is allocated
+          together. Even with dynamic sized arrays like vector in C++ or list in
+          Python or ArrayList in Java. the internal working involves
+          de-allocation of whole memory and allocation of a bigger chunk when
+          insertions happen beyond the current capacity.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
