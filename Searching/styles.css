@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: white;
+  }
+  .navbar {
+    background-color: #fcfcfd;
+    overflow: hidden;
+    width: 160px;
+    height: 100vh;
+    position: fixed;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .navbar a {
+    display: block;
+    color: #1b1b1b;
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .navbar a:hover {
+    background-color: #fbeee9;
+    color: black;
+  }
+  .navbar .active {
+    background-color: #ff7063;
+    color: #fff;
+    border-radius: 10px;
+  }
+  .navbar .active:hover {
+    background-color: #ff7063;
+    color: #fff;
+    border-radius: 10px;
+    cursor: default;
+  }
+  .navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+  }
+  /* Dropdown Styling */
+  /* Dropdown Styling */
+.dropdown {
+    margin-top: 15px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+  
+  .dropdown label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1b1b1b;
+  }
+  
+  /* Adjust the width to make the dropdown wider */
+  .dropdown select {
+    margin-top: 10px;
+    width:  100 px; /* You can change this to a specific pixel value if you prefer, like width: 200px; */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fbeee9;
+    color: #1b1b1b;
+    font-size: 14px;
+  }
+  
+  /* Hover effect for dropdown */
+  .dropdown select:hover {
+    background-color: #ff7063;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+    font-size: 14px;
+  }
+  .content h1 {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .content li {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .content p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
