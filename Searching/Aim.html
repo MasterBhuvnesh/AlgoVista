@@ -26,9 +26,10 @@
       <!-- Dropdown for Search Type -->
       <div class="dropdown">
         <label for="searchType">Choose a Search Type:</label>
-        <select id="searchType" name="searchType">
-          <option value="linear"  >Linear Search</option>
-          <option value="binary">Binary Search</option>
+        <select id="searchType" name="searchType" onchange="navigateToPage()">
+          <option value="">--Select Search--</option>
+          <option value="linearaim.html">Linear Search</option>
+          <option value="binaryaim.html">Binary Search</option>
         </select>
       </div>
 
@@ -57,8 +58,6 @@
         </li>
       </ul>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
-
