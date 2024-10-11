@@ -82,13 +82,13 @@
     </div>
     <!-- CONTENT -->
     <div class="content">
-      <h1>Basic of Stack</h1>
+      <h1>Basics of Stack</h1>
 
       <!-- YouTube Video Embed -->
       <div class="video-container">
         <iframe
-          width="560"
-          height="315"
+          width="250px"
+          height="182px "
           src="https://www.youtube.com/embed/I5lq6sCuABE?si=UYfeEc26Q8V8n0rD"
          <!-- https://m.youtube.com/watch?si=FbjLo-GbIyJJOUNx&v=I5lq6sCuABE&feature=youtu.be-->
           title="YouTube video player"
@@ -100,6 +100,47 @@
       </div>
 
       <h2>Introduction to Stack</h2>
+      <p>Stack is a linear data structure based on <b>LIFO(Last In First Out)</b> principle in which the insertion of a new element and removal of an existing element takes place at the same end represented as the top of the stack.</p>
+
+      <p>To implement the stack, it is required to maintain the pointer to the top of the stack , which is the last element to be inserted because we can access the elements only on the top of the stack.</p>
+      
+      <br>
+      
+      <h3><b>LIFO(Last In First Out) Principle in Stack Data Structure:</b></h3>
+      <p>This strategy states that the element that is inserted last will come out first. You can take a pile of plates kept on top of each other as a real-life example. The plate which we put last is on the top and since we remove the plate that is at the top, we can say that the plate that was put last comes out first.</p>
+
+      <br>
+
+      <h3><b>Representation of Stack Data Structure:</b></h3>
+      <p>Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first.</p>
+
+      <img src="https://www.boardinfinity.com/blog/content/images/2022/10/pictorial-representation-of-stack.png" alt="" style="display: block; margin-left: auto; margin-right: auto">
+
+      <br><br>
+
+      <h3><b>Types of Stack Data Structure:</b></h3>
+      <li><b>Fixed Size Stack</b>: As the name suggests, a fixed size stack has a fixed size and cannot grow or shrink dynamically. If the stack is full and an attempt is made to add an element to it, an overflow error occurs. If the stack is empty and an attempt is made to remove an element from it, an underflow error occurs.</li>
+      <li><b>Dynamic Size Stack</b>: A dynamic size stack can grow or shrink dynamically. When the stack is full, it automatically increases its size to accommodate the new element, and when the stack is empty, it decreases its size. This type of stack is implemented using a linked list, as it allows for easy resizing of the stack.</li>
+
+      <br>
+
+      <h3><b>Basic Operations on Stack Data Structure:</b></h3>
+      <p>There are certain operations that can be performed on stack for modifying or inspecting it.</p>
+      <li><b>push()</b>: Insert an element into the stack.</li>
+      <li><b>pop()</b>: Delete/Remove an element from the stack.</li>
+      <li><b>peek()</b>: Returns the topmost element of the stack. Sometimes also referred as top()/tos().</li>
+      <li><b>isEmpty()</b>: Return true of stack is empty else false.</li>
+      <li><b>isFull()</b>: Return true if the stack is full else false.</li>
+
+      <br>
+
+      <h3><b>Overflow and Underflow conditions:</b></h3>
+      <li><b>Overflow</b>: A condition where the stack is full(top of the stack(TOS) is at MAX-1) while inserting a new element is called overflow condition.</li>
+      <br>
+      <img src="https://postimg.cc/JGLwxbh4" alt="" style="display: block; margin-left: auto; margin-right: auto;">
+      <br>
+      <li><b>Underflow</b>: A condition where the stack is already empty(top os the stack(TOS) is at -1) while removing an element is called underflow condition.</li>
+
       
     </div>
   </body>
