@@ -86,17 +86,7 @@
 
       <!-- YouTube Video Embed -->
       <div class="video-container">
-        <iframe
-          width="250px"
-          height="182px "
-          src="https://www.youtube.com/embed/I5lq6sCuABE?si=UYfeEc26Q8V8n0rD"
-         <!-- https://m.youtube.com/watch?si=FbjLo-GbIyJJOUNx&v=I5lq6sCuABE&feature=youtu.be-->
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/I5lq6sCuABE" title="Stack Data Structure | Illustrated Data Structures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <h2>Introduction to Stack</h2>
@@ -112,7 +102,7 @@
       <br>
 
       <h3><b>Representation of Stack Data Structure:</b></h3>
-      <p>Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first.</p>
+      <p>Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first.</p><br>
 
       <img src="https://www.boardinfinity.com/blog/content/images/2022/10/pictorial-representation-of-stack.png" alt="" style="display: block; margin-left: auto; margin-right: auto">
 
@@ -145,9 +135,117 @@
       <br>
 
       <h4><b>Push Operation:</b></h4>
-      <p>Adds an item to the stack. If the stack is full then it said to be an overflow condition.</p>
+      <p>Adds an item to the stack. If the stack is full and push operation is applied,it is said to be overflow condition.</p>
       <br>
       <h5>Algorithm for push operation:</h5>
+      <li>Before pushing the element to the stack, we check if the stack is full .</li>
+      <li>If the stack is full (TOS == MAX-1) , then Stack Overflows and we cannot insert the element to the stack.</li>
+      <li>Otherwise, we increment the value of TOS by 1 (TOS = TOS + 1) and the new value is inserted at TOS position .</li>
+      <li>The elements can be pushed into the stack till we reach the capacity(MAX) of the stack.</li><br>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240606180844/Push-Operation-in-Stack-(1).webp" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 350px; width: 550px;"><br>
+
+      <h4><b>Pop Operation:</b></h4>
+      <p>Removes an item from the stack. If stack is empty and pop operation is applied, it is said to be underflow condition.</p>
+      <br>
+      <h5>Algorithm for pop operation:</h5>
+      <li>Before popping the element from the stack, we check if the stack is empty .</li>
+      <li>If the stack is empty (MAX == -1), then Stack Underflows and we cannot remove any element from the stack.</li>
+      <li>Otherwise, we store the value at TOS, decrement the value of MAX by 1 (MAX = MAX   – 1) and return the stored TOS value.</li><br>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240606180943/Pop-Operation-in-Stack-(1).webp" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 3  50px; width: 550px;"><br>
+
+      <h4><b>Tos or Peek Operation:</b></h4>
+      <p>Returns the top element of the stack.</p>
+      <br>
+      <h5>Algorithm for Peek Operation:</h5>
+      <li>Before returning the top element from the stack, we check if the stack is empty.</li>
+      <li>If the stack is empty (TOS == -1), we simply print “Stack is empty”.</li>
+      <li>Otherwise, we return the element stored at index = TOS .</li><br>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240606181023/Top-or-Peek-Operation-in-Stack-(1).webp" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 350px; width: 550px;"><br>
+
+      <h4><b>isEmpty Operation:</b></h4>
+      <p>Returns true if the stack is empty, else false.</p>
+      <br>
+      <h5>Algorithm for isEmpty Operation:</h5>
+      <li>Before returning the top element from the stack, we check if the stack is empty.</li>
+      <li>If the stack is empty (TOS == -1), we simply print “Stack is empty”.</li>
+      <li>Otherwise, we return the element stored at index = top .</li><br>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240606181023/Top-or-Peek-Operation-in-Stack-(1).webp" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 350px; width: 550px;"><br>
+
+      <h4><b>isFull Operation:</b></h4>
+      <p>Returns true if the stack is full, else false.</p>
+      <br>
+      <h5>Algorithm for isFull Operation:</h5>
+      <li>Check for the value of TOS in stack.</li>
+      <li>If (TOS == MAX-1), then the stack is full so return true.</li>
+      <li>Otherwise, the stack is not full so return false.</li><br>
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240606181147/isFull-Operation-in-Stack-(1).webp" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 350px; width: 550px;"><br>
+
+      <h3><b>Implementation of Stack Data Structure:</b></h3>
+      <p>The basic operations that can be performed on a stack include push, pop, and peek. There are two ways to implement a stack –</p>
+      <li>Using Array</li>
+      <li>Using Linked List</li>
+      <br>
+      <p>In an array-based implementation, the push operation is implemented by incrementing the index of the top element and storing the new element at that index. The pop operation is implemented by returning the value stored at the top index and then decrementing the index of the top element.</p><br>
+      <p>In a linked list-based implementation, the push operation is implemented by creating a new node with the new element and setting the next pointer of the current top node to the new node. The pop operation is implemented by setting the next pointer of the current top node to the next node and returning the value of the current top node.</p>
+      <br>
+      <h4><b>Implementation of Stack Data Structure using Array:</b></h4>
+      <--Code and output--><br>
+
+      <h5><b>Advantages of Array Implementation:</b></h5>
+      <li>Easy to implement</li>
+      <li>Memory is saved as pointers are not involved.</li>
+      <br>
+      <h5><b>Disadvantages of Array Implementation:</b></h5>
+      <li>It is not dynamic i.e., it doesn’t grow and shrink depending on needs at runtime. [But in case of dynamic sized arrays like vector in C++, list in Python, ArrayList in Java, stacks can grow and shrink with array implementation as well].</li>
+      <li>The total size of the stack must be defined beforehand.</li><br>
+
+      <h4><b>Implementation of Stack Data Structure using Linked List:</b></h4>
+      <--Code and output--><br>
+      
+      <h5><b>Advantages of Linked List Implementation:</b></h5>
+      <li>The linked list implementation of a stack can grow and shrink according to the needs at runtime.</li>
+      <li>It is used in many virtual machines like JVM.</li>
+      <br>
+      <h5><b>Disadvantages of Linked List implementation:</b></h5>
+      <li>Requires extra memory due to the involvement of pointers.</li>
+      <li>Random accessing is not possible in stack.</li><br><br>
+
+      <h3><b>Complexity Analysis of Operations on Stack Data Structure:</b></h3>
+      <br>
+      <center>
+      <table style="border: 3px solid black; height: 500px; width: 900px;">
+        <tr style="border: 2px solid black;">
+          <th style="border: 2px solid black;">Operations</th>
+          <th style="border: 2px solid black;">Time Complexity</th>
+          <th style="border: 2px solid black;">Space Complexity</th>
+        </tr>
+        <tr style="border: 1px solid black; border-spacing: 5px;">
+          <th style="border: 2px solid black;">push()</th>
+          <td style="border: 1px solid black; text-align: center;" >O(1)</td>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+        </tr>
+        <tr style="border: 1px solid black; border-spacing: 5px;">
+          <th style="border: 2px solid black;">pop()</th>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+        </tr>
+        <tr style="border: 1px solid black; border-spacing: 5px;">
+          <th style="border: 2px solid black;">tos() or peek()</th>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+        </tr>
+        <tr style="border: 1px solid black; border-spacing: 5px;">
+          <th style="border: 2px solid black;">isEmpty()</th>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+        </tr>
+        <tr style="border: 1px solid black; border-spacing: 5px;">
+          <th style="border: 2px solid black;">isFull()</th>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+          <td style="border: 1px solid black; text-align: center;">O(1)</td>
+        </tr>
+      </table>
+    </center>
 
 
 
