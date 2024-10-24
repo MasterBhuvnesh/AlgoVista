@@ -1,0 +1,554 @@
+{
+  "quizzes": [
+    {
+      "quiz_type": "linked list",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a linked list?",
+          "correct_answer": "A collection of nodes where each node contains data and a reference to the next node.",
+          "incorrect_answers": [
+            "A linear data structure where elements are stored in contiguous memory locations.",
+            "A collection of elements with fixed size and random access.",
+            "A tree-like structure with nodes containing pointers to multiple children."
+          ]
+        },
+        {
+          "id": 2,
+          "question": "In a singly linked list, how is the last node identified?",
+          "correct_answer": "It contains NULL in its next pointer.",
+          "incorrect_answers": [
+            "It has a reference to the first node.",
+            "It contains the previous node’s reference.",
+            "It stores a special marker indicating it’s the last node."
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the time complexity of inserting a node at the beginning of a singly linked list?",
+          "correct_answer": "O(1)",
+          "incorrect_answers": ["O(n)", "O(log n)", "O(n log n)"]
+        },
+        {
+          "id": 4,
+          "question": "Which of the following operations on a singly linked list has a time complexity of O(n)?",
+          "correct_answer": "Searching for an element",
+          "incorrect_answers": [
+            "Insertion at the head",
+            "Deletion at the head",
+            "Insertion at the tail"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the main disadvantage of a singly linked list over an array?",
+          "correct_answer": "Random access is not allowed.",
+          "incorrect_answers": [
+            "It requires more memory due to pointers.",
+            "It is harder to implement.",
+            "All of the above"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "In a doubly linked list, each node contains:",
+          "correct_answer": "Two pointers: one to the next node and one to the previous node.",
+          "incorrect_answers": [
+            "A pointer to the next node only.",
+            "A pointer to the previous node only.",
+            "Data and no pointers."
+          ]
+        },
+        {
+          "id": 7,
+          "question": "What is the time complexity of accessing an element in a linked list (in the worst case)?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n log n)"]
+        },
+        {
+          "id": 8,
+          "question": "Which of the following is true about circular linked lists?",
+          "correct_answer": "The last node points to the first node.",
+          "incorrect_answers": [
+            "The last node points to NULL.",
+            "They are more efficient than doubly linked lists.",
+            "They have constant-time random access."
+          ]
+        },
+        {
+          "id": 9,
+          "question": "Which operation in a singly linked list typically requires traversing the entire list?",
+          "correct_answer": "Inserting at the end",
+          "incorrect_answers": [
+            "Inserting at the beginning",
+            "Deleting the first element",
+            "Accessing the first element"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "What is the time complexity of searching for an element in an unsorted linked list?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"]
+        }
+      ]
+    },
+    {
+      "quiz_type": "stack",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the primary principle of a stack data structure?",
+          "correct_answer": "Last In, First Out (LIFO)",
+          "incorrect_answers": [
+            "First In, First Out (FIFO)",
+            "Ordered Array",
+            "Random Access"
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Which operation is not typically performed on a stack?",
+          "correct_answer": "Insert at bottom",
+          "incorrect_answers": ["Push", "Pop", "Peek"]
+        },
+        {
+          "id": 3,
+          "question": "What is the time complexity of pushing an element onto a stack?",
+          "correct_answer": "O(1)",
+          "incorrect_answers": ["O(n)", "O(log n)", "O(n^2)"]
+        },
+        {
+          "id": 4,
+          "question": "Which data structure is typically used to implement a stack?",
+          "correct_answer": "Array or Linked List",
+          "incorrect_answers": ["Binary Tree", "Hash Table", "Graph"]
+        },
+        {
+          "id": 5,
+          "question": "What happens when you try to pop an element from an empty stack?",
+          "correct_answer": "Stack Underflow",
+          "incorrect_answers": [
+            "Stack Overflow",
+            "Null Pointer Exception",
+            "IndexOutOfBoundsException"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "Which algorithm commonly uses a stack for its implementation?",
+          "correct_answer": "Depth-First Search",
+          "incorrect_answers": [
+            "Breadth-First Search",
+            "Dijkstra's Algorithm",
+            "Bubble Sort"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "What is the primary advantage of using a stack?",
+          "correct_answer": "Simple and efficient for last-in-first-out operations",
+          "incorrect_answers": [
+            "Random access to elements",
+            "Sorting capabilities",
+            "Constant time search"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "In which scenario would a stack NOT be an appropriate data structure?",
+          "correct_answer": "Implementing a queue",
+          "incorrect_answers": [
+            "Function call management",
+            "Undo mechanism in text editors",
+            "Expression evaluation"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "What operation would you use to add an element to the top of a stack?",
+          "correct_answer": "Push",
+          "incorrect_answers": ["Pop", "Peek", "Insert"]
+        },
+        {
+          "id": 10,
+          "question": "What is the space complexity of a stack with n elements?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"]
+        }
+      ]
+    },
+    {
+      "quiz_type": "graph",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What are the two main components of a graph?",
+          "correct_answer": "Vertices and Edges",
+          "incorrect_answers": [
+            "Nodes and Links",
+            "Points and Lines",
+            "Circles and Arrows"
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Which type of graph has edges with direction?",
+          "correct_answer": "Directed Graph",
+          "incorrect_answers": [
+            "Undirected Graph",
+            "Cyclic Graph",
+            "Complete Graph"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is a graph called if it has no cycles?",
+          "correct_answer": "Acyclic Graph",
+          "incorrect_answers": ["Tree", "Forest", "Planar Graph"]
+        },
+        {
+          "id": 4,
+          "question": "Which algorithm is commonly used to find the shortest path in a weighted graph?",
+          "correct_answer": "Dijkstra's Algorithm",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Kruskal's Algorithm"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the maximum number of edges in a simple graph with n vertices?",
+          "correct_answer": "n(n-1)/2",
+          "incorrect_answers": ["n^2", "2^n", "n-1"]
+        },
+        {
+          "id": 6,
+          "question": "Which data structure is typically used to represent a graph?",
+          "correct_answer": "Adjacency List or Adjacency Matrix",
+          "incorrect_answers": ["Array", "Linked List", "Binary Tree"]
+        },
+        {
+          "id": 7,
+          "question": "What is a spanning tree of a graph?",
+          "correct_answer": "A tree that includes all vertices of the graph",
+          "incorrect_answers": [
+            "A tree with the maximum number of edges",
+            "A graph with no cycles",
+            "A complete subgraph"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "Which graph traversal algorithm uses a queue?",
+          "correct_answer": "Breadth-First Search",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Dijkstra's Algorithm",
+            "Prim's Algorithm"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "What is the time complexity of Depth-First Search for a graph represented as an adjacency list?",
+          "correct_answer": "O(V + E)",
+          "incorrect_answers": ["O(V^2)", "O(E log V)", "O(V log E)"]
+        },
+        {
+          "id": 10,
+          "question": "In a weighted graph, what does the weight of an edge represent?",
+          "correct_answer": "Cost or distance between vertices",
+          "incorrect_answers": [
+            "Number of vertices",
+            "Number of edges",
+            "Degree of vertices"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "hashing",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the primary purpose of a hash function?",
+          "correct_answer": "To map data of arbitrary size to fixed-size values",
+          "incorrect_answers": [
+            "To encrypt data",
+            "To sort data in ascending order",
+            "To compress data"
+          ]
+        },
+        {
+          "id": 2,
+          "question": "What is a hash collision?",
+          "correct_answer": "When two keys map to the same hash value",
+          "incorrect_answers": [
+            "When a hash function fails",
+            "When two hash functions are equal",
+            "When two different hash tables are used"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "Which method is commonly used to handle hash collisions?",
+          "correct_answer": "Chaining",
+          "incorrect_answers": [
+            "Binary search",
+            "Linear probing",
+            "Random shuffling"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "What is the time complexity for searching in a well-designed hash table?",
+          "correct_answer": "O(1)",
+          "incorrect_answers": ["O(log n)", "O(n)", "O(n log n)"]
+        },
+        {
+          "id": 5,
+          "question": "Which of the following is not a common type of hash function?",
+          "correct_answer": "Fibonacci hashing",
+          "incorrect_answers": [
+            "Division method",
+            "Multiplication method",
+            "Mid-square method"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "What is double hashing?",
+          "correct_answer": "Using two hash functions to resolve collisions",
+          "incorrect_answers": [
+            "Applying a hash function twice",
+            "Using a hash function and a random number generator",
+            "Hashing twice for greater security"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "Which property of a hash function ensures that different inputs generate distinct outputs?",
+          "correct_answer": "Minimal collisions",
+          "incorrect_answers": [
+            "Determinism",
+            "Compression",
+            "Fixed-size output"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "Which data structure is often implemented using hashing?",
+          "correct_answer": "HashMap",
+          "incorrect_answers": ["Queue", "Stack", "Tree"]
+        },
+        {
+          "id": 9,
+          "question": "What is the load factor in hashing?",
+          "correct_answer": "The ratio of the number of elements to the table size",
+          "incorrect_answers": [
+            "The ratio of table size to the number of elements",
+            "The average number of hash collisions",
+            "The maximum number of collisions allowed"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "What happens when a hash table exceeds its load factor?",
+          "correct_answer": "The table is resized and rehashed",
+          "incorrect_answers": [
+            "All elements are deleted",
+            "A backup table is used",
+            "Hashing performance improves"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "searching Binary",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which searching algorithm is the most efficient for a sorted array?",
+          "correct_answer": "Binary Search",
+          "incorrect_answers": [
+            "Linear Search",
+            "Jump Search",
+            "Depth-First Search"
+          ]
+        },
+        {
+          "id": 2,
+          "question": "What is the time complexity of binary search in the worst case?",
+          "correct_answer": "O(log n)",
+          "incorrect_answers": ["O(n)", "O(1)", "O(n^2)"]
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is a characteristic of linear search?",
+          "correct_answer": "It checks each element one by one",
+          "incorrect_answers": [
+            "It divides the search space",
+            "It only works on sorted arrays",
+            "It uses a tree structure"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "What is an advantage of binary search over linear search?",
+          "correct_answer": "It is faster for large sorted datasets",
+          "incorrect_answers": [
+            "It can handle unsorted data",
+            "It works on both arrays and linked lists",
+            "It is easier to implement"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "Which search algorithm uses a divide and conquer approach?",
+          "correct_answer": "Binary Search",
+          "incorrect_answers": [
+            "Linear Search",
+            "Breadth-First Search",
+            "Interpolation Search"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "In which scenario is linear search preferable to binary search?",
+          "correct_answer": "When the dataset is small or unsorted",
+          "incorrect_answers": [
+            "When the dataset is large and sorted",
+            "When the elements are uniformly distributed",
+            "When using a recursive algorithm"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "Which search algorithm is used in graphs to explore all the nodes of a level before moving to the next?",
+          "correct_answer": "Breadth-First Search",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Binary Search",
+            "Linear Search"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "What is the time complexity of linear search?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(log n)", "O(1)", "O(n log n)"]
+        },
+        {
+          "id": 9,
+          "question": "Which algorithm works by guessing the position of the search key using the values of the array?",
+          "correct_answer": "Interpolation Search",
+          "incorrect_answers": ["Binary Search", "Jump Search", "Linear Search"]
+        },
+        {
+          "id": 10,
+          "question": "Which algorithm is best suited for finding the shortest path in an unweighted graph?",
+          "correct_answer": "Breadth-First Search",
+          "incorrect_answers": [
+            "Binary Search",
+            "Depth-First Search",
+            "Linear Search"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "searching Linear",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which searching algorithm is the most efficient for a sorted array?",
+          "correct_answer": "Binary Search",
+          "incorrect_answers": [
+            "Linear Search",
+            "Jump Search",
+            "Depth-First Search"
+          ]
+        },
+        {
+          "id": 2,
+          "question": "What is the time complexity of binary search in the worst case?",
+          "correct_answer": "O(log n)",
+          "incorrect_answers": ["O(n)", "O(1)", "O(n^2)"]
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is a characteristic of linear search?",
+          "correct_answer": "It checks each element one by one",
+          "incorrect_answers": [
+            "It divides the search space",
+            "It only works on sorted arrays",
+            "It uses a tree structure"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "What is an advantage of binary search over linear search?",
+          "correct_answer": "It is faster for large sorted datasets",
+          "incorrect_answers": [
+            "It can handle unsorted data",
+            "It works on both arrays and linked lists",
+            "It is easier to implement"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "Which search algorithm uses a divide and conquer approach?",
+          "correct_answer": "Binary Search",
+          "incorrect_answers": [
+            "Linear Search",
+            "Breadth-First Search",
+            "Interpolation Search"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "In which scenario is linear search preferable to binary search?",
+          "correct_answer": "When the dataset is small or unsorted",
+          "incorrect_answers": [
+            "When the dataset is large and sorted",
+            "When the elements are uniformly distributed",
+            "When using a recursive algorithm"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "Which search algorithm is used in graphs to explore all the nodes of a level before moving to the next?",
+          "correct_answer": "Breadth-First Search",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Binary Search",
+            "Linear Search"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "What is the time complexity of linear search?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(log n)", "O(1)", "O(n log n)"]
+        },
+        {
+          "id": 9,
+          "question": "Which algorithm works by guessing the position of the search key using the values of the array?",
+          "correct_answer": "Interpolation Search",
+          "incorrect_answers": ["Binary Search", "Jump Search", "Linear Search"]
+        },
+        {
+          "id": 10,
+          "question": "Which algorithm is best suited for finding the shortest path in an unweighted graph?",
+          "correct_answer": "Breadth-First Search",
+          "incorrect_answers": [
+            "Binary Search",
+            "Depth-First Search",
+            "Linear Search"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+* {
+  cursor: default;
+  outline: none;
+}
+
+a,
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: text;
+}

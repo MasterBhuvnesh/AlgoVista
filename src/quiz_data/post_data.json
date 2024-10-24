@@ -1,0 +1,546 @@
+{
+  "quizzes": [
+    {
+      "quiz_type": "linked list",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the time complexity of reversing a singly linked list?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"]
+        },
+        {
+          "id": 2,
+          "question": "In a circular doubly linked list, how many NULL pointers are there?",
+          "correct_answer": "Zero",
+          "incorrect_answers": ["One", "Two", "Depends on the number of nodes"]
+        },
+        {
+          "id": 3,
+          "question": "What is the space complexity of Floyd's cycle-finding algorithm?",
+          "correct_answer": "O(1)",
+          "incorrect_answers": ["O(n)", "O(log n)", "O(n log n)"]
+        },
+        {
+          "id": 4,
+          "question": "Which of the following operations on a doubly linked list has a time complexity different from the others?",
+          "correct_answer": "Traversal",
+          "incorrect_answers": [
+            "Insertion at the head",
+            "Deletion at the tail",
+            "Insertion at a given position"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the primary advantage of a skip list over a regular linked list?",
+          "correct_answer": "Improved search time complexity",
+          "incorrect_answers": [
+            "Lower memory usage",
+            "Simpler implementation",
+            "Better cache performance"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "In an XOR linked list, what operation is performed to get the address of the next node?",
+          "correct_answer": "XOR of current node address and previous node address",
+          "incorrect_answers": [
+            "Addition of current node address and previous node address",
+            "Subtraction of previous node address from current node address",
+            "Bitwise AND of current node address and previous node address"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "What is the time complexity of merging two sorted linked lists?",
+          "correct_answer": "O(n + m)",
+          "incorrect_answers": ["O(n log n)", "O(n * m)", "O(max(n, m))"]
+        },
+        {
+          "id": 8,
+          "question": "Which data structure is most efficient for implementing LRU (Least Recently Used) cache?",
+          "correct_answer": "Doubly linked list with hash map",
+          "incorrect_answers": [
+            "Singly linked list",
+            "Circular linked list",
+            "Skip list"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "What is the primary advantage of using a sentinel node in a linked list?",
+          "correct_answer": "Simplifies edge cases in operations",
+          "incorrect_answers": [
+            "Reduces memory usage",
+            "Improves search time",
+            "Allows for circular structure"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "In a memory-efficient doubly linked list implementation, how is the previous node typically referenced?",
+          "correct_answer": "XOR of addresses of adjacent nodes",
+          "incorrect_answers": [
+            "Direct pointer to previous node",
+            "Index in an array",
+            "Hash of the previous node's data"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "stack",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the time complexity of implementing a queue using two stacks?",
+          "correct_answer": "O(1) amortized",
+          "incorrect_answers": ["O(n) for all operations", "O(log n)", "O(n^2)"]
+        },
+        {
+          "id": 2,
+          "question": "Which stack-based algorithm is used for expression parsing?",
+          "correct_answer": "Shunting yard algorithm",
+          "incorrect_answers": [
+            "Quicksort",
+            "Depth-first search",
+            "Breadth-first search"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the space complexity of implementing a min-stack?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n log n)"]
+        },
+        {
+          "id": 4,
+          "question": "In a stack-based memory allocation, what is the primary advantage of using a stack frame?",
+          "correct_answer": "Efficient memory management for function calls",
+          "incorrect_answers": [
+            "Dynamic memory allocation",
+            "Garbage collection",
+            "Thread-safe operations"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the time complexity of reversing a stack using only stack operations?",
+          "correct_answer": "O(n^2)",
+          "incorrect_answers": ["O(n)", "O(log n)", "O(1)"]
+        },
+        {
+          "id": 6,
+          "question": "Which data structure is typically used to implement a stack in memory-constrained environments?",
+          "correct_answer": "Linked list",
+          "incorrect_answers": ["Dynamic array", "Hash table", "Binary tree"]
+        },
+        {
+          "id": 7,
+          "question": "What is the primary use of a monotonic stack?",
+          "correct_answer": "Solving next greater/smaller element problems",
+          "incorrect_answers": [
+            "Implementing recursive algorithms",
+            "Balancing parentheses",
+            "Sorting elements"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "In a stack-based implementation of backtracking, what operation is performed when backtracking?",
+          "correct_answer": "Pop",
+          "incorrect_answers": ["Push", "Peek", "Swap"]
+        },
+        {
+          "id": 9,
+          "question": "What is the space complexity of implementing K stacks in a single array?",
+          "correct_answer": "O(n + k)",
+          "incorrect_answers": ["O(n)", "O(k)", "O(n * k)"]
+        },
+        {
+          "id": 10,
+          "question": "Which stack-based algorithm is used for finding strongly connected components in a graph?",
+          "correct_answer": "Tarjan's algorithm",
+          "incorrect_answers": [
+            "Dijkstra's algorithm",
+            "Kruskal's algorithm",
+            "Floyd-Warshall algorithm"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "graph",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the time complexity of Floyd-Warshall algorithm for all-pairs shortest paths?",
+          "correct_answer": "O(V^3)",
+          "incorrect_answers": ["O(V^2 log V)", "O(VE)", "O(V + E)"]
+        },
+        {
+          "id": 2,
+          "question": "Which graph algorithm is used to find the maximum flow in a flow network?",
+          "correct_answer": "Ford-Fulkerson algorithm",
+          "incorrect_answers": [
+            "Kruskal's algorithm",
+            "Prim's algorithm",
+            "Bellman-Ford algorithm"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the primary difference between Prim's and Kruskal's algorithms?",
+          "correct_answer": "Prim's grows a single tree, Kruskal's grows a forest",
+          "incorrect_answers": [
+            "Prim's works on directed graphs, Kruskal's on undirected",
+            "Prim's has better time complexity",
+            "Kruskal's requires less memory"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "Which data structure is most efficient for implementing Dijkstra's algorithm?",
+          "correct_answer": "Fibonacci heap",
+          "incorrect_answers": ["Binary heap", "Array", "Linked list"]
+        },
+        {
+          "id": 5,
+          "question": "What is the chromatic number of a complete graph with n vertices?",
+          "correct_answer": "n",
+          "incorrect_answers": ["n-1", "log n", "n/2"]
+        },
+        {
+          "id": 6,
+          "question": "Which algorithm is used to find strongly connected components in a directed graph?",
+          "correct_answer": "Kosaraju's algorithm",
+          "incorrect_answers": [
+            "Breadth-First Search",
+            "A* search",
+            "Bellman-Ford algorithm"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "What is the time complexity of topological sorting using DFS?",
+          "correct_answer": "O(V + E)",
+          "incorrect_answers": ["O(V log E)", "O(V^2)", "O(E log V)"]
+        },
+        {
+          "id": 8,
+          "question": "Which graph property does the Eulerian path problem check?",
+          "correct_answer": "Existence of a path visiting every edge exactly once",
+          "incorrect_answers": [
+            "Existence of a cycle visiting every vertex",
+            "Minimum spanning tree",
+            "Maximum flow in a network"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "What is the primary advantage of using an adjacency list over an adjacency matrix?",
+          "correct_answer": "Space efficiency for sparse graphs",
+          "incorrect_answers": [
+            "Faster edge weight updates",
+            "Better cache performance",
+            "Simpler implementation"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "In a bipartite graph, what is true about the chromatic number?",
+          "correct_answer": "It is always 2",
+          "incorrect_answers": [
+            "It is always greater than 2",
+            "It depends on the number of edges",
+            "It is equal to the maximum degree of any vertex"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "hashing",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the expected time complexity of operations in a hash table with perfect hashing?",
+          "correct_answer": "O(1)",
+          "incorrect_answers": ["O(log n)", "O(n)", "O(n log n)"]
+        },
+        {
+          "id": 2,
+          "question": "Which hashing technique is used in the Rabin-Karp string matching algorithm?",
+          "correct_answer": "Rolling hash",
+          "incorrect_answers": [
+            "Universal hashing",
+            "Cryptographic hashing",
+            "Perfect hashing"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the primary advantage of cuckoo hashing over linear probing?",
+          "correct_answer": "Worst-case constant lookup time",
+          "incorrect_answers": [
+            "Better cache performance",
+            "Simpler implementation",
+            "Lower memory usage"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "In consistent hashing, what is the main benefit?",
+          "correct_answer": "Minimizing rehashing when the hash table size changes",
+          "incorrect_answers": [
+            "Faster lookup times",
+            "Better collision resolution",
+            "Improved security"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the primary purpose of a cryptographic hash function?",
+          "correct_answer": "To create a fixed-size, unique fingerprint of data",
+          "incorrect_answers": [
+            "To compress data",
+            "To encrypt data",
+            "To sort data efficiently"
+          ]
+        },
+        {
+          "id": 6,
+          "question": "Which property of cryptographic hash functions makes them resistant to preimage attacks?",
+          "correct_answer": "One-way function",
+          "incorrect_answers": [
+            "Collision resistance",
+            "Avalanche effect",
+            "Fixed output size"
+          ]
+        },
+        {
+          "id": 7,
+          "question": "What is the time complexity of building a perfect hash function?",
+          "correct_answer": "O(n)",
+          "incorrect_answers": ["O(1)", "O(log n)", "O(n log n)"]
+        },
+        {
+          "id": 8,
+          "question": "In which scenario would you prefer open addressing over chaining in hash tables?",
+          "correct_answer": "When memory usage needs to be precisely controlled",
+          "incorrect_answers": [
+            "When dealing with high collision rates",
+            "When frequent deletions are expected",
+            "When the key size is very large"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "What is the primary advantage of using a bloom filter?",
+          "correct_answer": "Space efficiency for membership queries",
+          "incorrect_answers": [
+            "Perfect accuracy",
+            "Ability to store and retrieve values",
+            "Resistance to cryptographic attacks"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "Which hashing technique is commonly used in distributed systems for load balancing?",
+          "correct_answer": "Consistent hashing",
+          "incorrect_answers": [
+            "Perfect hashing",
+            "Linear probing",
+            "Cuckoo hashing"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "searching Binary",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the time complexity of searching in a skip list?",
+          "correct_answer": "O(log n) on average",
+          "incorrect_answers": ["O(1)", "O(n)", "O(n log n)"]
+        },
+        {
+          "id": 2,
+          "question": "Which search algorithm is most efficient for searching in a sorted array with duplicates?",
+          "correct_answer": "Exponential search",
+          "incorrect_answers": [
+            "Binary search",
+            "Interpolation search",
+            "Jump search"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the primary advantage of A* search over Dijkstra's algorithm?",
+          "correct_answer": "Uses heuristics to guide the search",
+          "incorrect_answers": [
+            "Guaranteed to find the shortest path",
+            "Works on negative edge weights",
+            "Has lower time complexity"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "In which scenario would you prefer interpolation search over binary search?",
+          "correct_answer": "When elements are uniformly distributed",
+          "incorrect_answers": [
+            "When the array is small",
+            "When searching for multiple elements",
+            "When memory is constrained"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the space complexity of iterative deepening depth-first search?",
+          "correct_answer": "O(d)",
+          "incorrect_answers": ["O(b^d)", "O(bd)", "O(1)"]
+        },
+        {
+          "id": 6,
+          "question": "Which search algorithm is most suitable for finding the median in a stream of integers?",
+          "correct_answer": "Two-heap method",
+          "incorrect_answers": ["Quick select", "Merge sort", "Binary search"]
+        },
+        {
+          "id": 7,
+          "question": "What is the primary advantage of using a trie for string searching?",
+          "correct_answer": "Efficient prefix matching",
+          "incorrect_answers": [
+            "Lower memory usage",
+            "Faster insertion of new strings",
+            "Better worst-case time complexity"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "In the context of search algorithms, what does 'admissible heuristic' mean?",
+          "correct_answer": "Never overestimates the cost to reach the goal",
+          "incorrect_answers": [
+            "Always finds the optimal solution",
+            "Runs in polynomial time",
+            "Uses constant extra space"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "Which search algorithm is most efficient for finding connected components in an undirected graph?",
+          "correct_answer": "Disjoint Set Union (Union-Find)",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "A* Search"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "What is the primary advantage of using a B-tree for searching in databases?",
+          "correct_answer": "Efficient for disk-based storage systems",
+          "incorrect_answers": [
+            "Lower memory usage",
+            "Faster in-memory operations",
+            "Simpler implementation"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_type": "searching Linear",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the time complexity of searching in a skip list?",
+          "correct_answer": "O(log n) on average",
+          "incorrect_answers": ["O(1)", "O(n)", "O(n log n)"]
+        },
+        {
+          "id": 2,
+          "question": "Which search algorithm is most efficient for searching in a sorted array with duplicates?",
+          "correct_answer": "Exponential search",
+          "incorrect_answers": [
+            "Binary search",
+            "Interpolation search",
+            "Jump search"
+          ]
+        },
+        {
+          "id": 3,
+          "question": "What is the primary advantage of A* search over Dijkstra's algorithm?",
+          "correct_answer": "Uses heuristics to guide the search",
+          "incorrect_answers": [
+            "Guaranteed to find the shortest path",
+            "Works on negative edge weights",
+            "Has lower time complexity"
+          ]
+        },
+        {
+          "id": 4,
+          "question": "In which scenario would you prefer interpolation search over binary search?",
+          "correct_answer": "When elements are uniformly distributed",
+          "incorrect_answers": [
+            "When the array is small",
+            "When searching for multiple elements",
+            "When memory is constrained"
+          ]
+        },
+        {
+          "id": 5,
+          "question": "What is the space complexity of iterative deepening depth-first search?",
+          "correct_answer": "O(d)",
+          "incorrect_answers": ["O(b^d)", "O(bd)", "O(1)"]
+        },
+        {
+          "id": 6,
+          "question": "Which search algorithm is most suitable for finding the median in a stream of integers?",
+          "correct_answer": "Two-heap method",
+          "incorrect_answers": ["Quick select", "Merge sort", "Binary search"]
+        },
+        {
+          "id": 7,
+          "question": "What is the primary advantage of using a trie for string searching?",
+          "correct_answer": "Efficient prefix matching",
+          "incorrect_answers": [
+            "Lower memory usage",
+            "Faster insertion of new strings",
+            "Better worst-case time complexity"
+          ]
+        },
+        {
+          "id": 8,
+          "question": "In the context of search algorithms, what does 'admissible heuristic' mean?",
+          "correct_answer": "Never overestimates the cost to reach the goal",
+          "incorrect_answers": [
+            "Always finds the optimal solution",
+            "Runs in polynomial time",
+            "Uses constant extra space"
+          ]
+        },
+        {
+          "id": 9,
+          "question": "Which search algorithm is most efficient for finding connected components in an undirected graph?",
+          "correct_answer": "Disjoint Set Union (Union-Find)",
+          "incorrect_answers": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "A* Search"
+          ]
+        },
+        {
+          "id": 10,
+          "question": "What is the primary advantage of using a B-tree for searching in databases?",
+          "correct_answer": "Efficient for disk-based storage systems",
+          "incorrect_answers": [
+            "Lower memory usage",
+            "Faster in-memory operations",
+            "Simpler implementation"
+          ]
+        }
+      ]
+    }
+  ]
+}
