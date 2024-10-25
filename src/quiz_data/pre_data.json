@@ -268,102 +268,71 @@
       ]
     },
     {
-      "quiz_type": "hashing",
-      "questions": [
-        {
-          "id": 1,
-          "question": "What is the primary purpose of a hash function?",
-          "correct_answer": "To map data of arbitrary size to fixed-size values",
-          "incorrect_answers": [
-            "To encrypt data",
-            "To sort data in ascending order",
-            "To compress data"
-          ]
-        },
-        {
-          "id": 2,
-          "question": "What is a hash collision?",
-          "correct_answer": "When two keys map to the same hash value",
-          "incorrect_answers": [
-            "When a hash function fails",
-            "When two hash functions are equal",
-            "When two different hash tables are used"
-          ]
-        },
-        {
-          "id": 3,
-          "question": "Which method is commonly used to handle hash collisions?",
-          "correct_answer": "Chaining",
-          "incorrect_answers": [
-            "Binary search",
-            "Linear probing",
-            "Random shuffling"
-          ]
-        },
-        {
-          "id": 4,
-          "question": "What is the time complexity for searching in a well-designed hash table?",
-          "correct_answer": "O(1)",
-          "incorrect_answers": ["O(log n)", "O(n)", "O(n log n)"]
-        },
-        {
-          "id": 5,
-          "question": "Which of the following is not a common type of hash function?",
-          "correct_answer": "Fibonacci hashing",
-          "incorrect_answers": [
-            "Division method",
-            "Multiplication method",
-            "Mid-square method"
-          ]
-        },
-        {
-          "id": 6,
-          "question": "What is double hashing?",
-          "correct_answer": "Using two hash functions to resolve collisions",
-          "incorrect_answers": [
-            "Applying a hash function twice",
-            "Using a hash function and a random number generator",
-            "Hashing twice for greater security"
-          ]
-        },
-        {
-          "id": 7,
-          "question": "Which property of a hash function ensures that different inputs generate distinct outputs?",
-          "correct_answer": "Minimal collisions",
-          "incorrect_answers": [
-            "Determinism",
-            "Compression",
-            "Fixed-size output"
-          ]
-        },
-        {
-          "id": 8,
-          "question": "Which data structure is often implemented using hashing?",
-          "correct_answer": "HashMap",
-          "incorrect_answers": ["Queue", "Stack", "Tree"]
-        },
-        {
-          "id": 9,
-          "question": "What is the load factor in hashing?",
-          "correct_answer": "The ratio of the number of elements to the table size",
-          "incorrect_answers": [
-            "The ratio of table size to the number of elements",
-            "The average number of hash collisions",
-            "The maximum number of collisions allowed"
-          ]
-        },
-        {
-          "id": 10,
-          "question": "What happens when a hash table exceeds its load factor?",
-          "correct_answer": "The table is resized and rehashed",
-          "incorrect_answers": [
-            "All elements are deleted",
-            "A backup table is used",
-            "Hashing performance improves"
-          ]
-        }
-      ]
+  "quiz_type": "hashing",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a hashing function?",
+      "correct_answer": "A function that maps data to a fixed size output",
+      "incorrect_answers": ["A function that encrypts data", "A function that compresses data", "A function that reverses data"]
     },
+    {
+      "id": 2,
+      "question": "Which data structure is most commonly used in conjunction with hashing functions?",
+      "correct_answer": "Hash table",
+      "incorrect_answers": ["Stack", "Queue", "Array"]
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of a hash function in an array or hash table?",
+      "correct_answer": "To efficiently index elements",
+      "incorrect_answers": ["To sort elements", "To search for elements", "To reverse elements"]
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is an advantage of using arrays over linked lists?",
+      "correct_answer": "1 and 3",
+      "incorrect_answers": ["1 only", "1 and 2", "3 only"]
+    },
+    {
+      "id": 5,
+      "question": "What will be the output of the following function? (head is the first node of a linked list)\n\nvoid traverse(struct node* head) {\n    printf('%d  ', head->data);\n    head = head->next;\n    traverse(head)\n}",
+      "correct_answer": "Runtime error",
+      "incorrect_answers": ["prints all the nodes of linked list", "prints the value of head node", "None of these"]
+    },
+    {
+      "id": 6,
+      "question": "What is the time complexity of inserting an element in start and end of a singly linked list respectively? (N = number of elements currently in Linked List)",
+      "correct_answer": "O(1), O(N)",
+      "incorrect_answers": ["O(N), O(N)", "O(1), O(1)", "O(N), O(1)"]
+    },
+    {
+      "id": 7,
+      "question": "In which of the following implementations can Linked lists be used?",
+      "correct_answer": "All of the mentioned.",
+      "incorrect_answers": ["To implement file systems.", "For separating chaining in hash-tables", "To implement non-binary trees."]
+    },
+    {
+      "id": 8,
+      "question": "def f(n):\n    If n == 0 or n == 1: return 1\n    return f(n-1) + f(n-2)\n\nTime complexity of this program:",
+      "correct_answer": "O(2^n)",
+      "incorrect_answers": ["O(log n)", "O(n)", "O(n^2)"]
+    },
+    {
+      "id": 9,
+      "question": "What is collision in hashing?",
+      "correct_answer": "When two keys map to the same index",
+      "incorrect_answers": ["When a key cannot be mapped to an index", "When the hash function is injective", "When hash function maps keys to unique indices only"]
+    },
+    {
+      "id": 10,
+      "question": "Which technique is commonly used to handle collisions in hash tables?",
+      "correct_answer": "Separate chaining",
+      "incorrect_answers": ["Stacking", "Sorting", "Binary search"]
+    }
+  ]
+}
+,
     {
       "quiz_type": "searching Binary",
       "questions": [
