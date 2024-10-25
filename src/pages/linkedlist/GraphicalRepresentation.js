@@ -3,6 +3,7 @@ import React, { useState, useCallback } from "react";
 const LinkedlistGraphicalRepresentation = () => {
   const [list, setList] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [insertIndex, setInsertIndex] = useState("");
   const [message, setMessage] = useState("");
 
   const addToFront = useCallback(() => {
@@ -27,6 +28,26 @@ const LinkedlistGraphicalRepresentation = () => {
     setInputValue("");
     setMessage(`Added ${inputValue} to the end of the list.`);
   }, [inputValue]);
+
+  const addAtIndex = useCallback(() => {
+    if (inputValue.trim() === "") {
+      setMessage("Please enter a value to add.");
+      return;
+    }
+    const index = parseInt(insertIndex);
+    if (isNaN(index) || index < 0 || index > list.length) {
+      setMessage("Please enter a valid index.");
+      return;
+    }
+    setList((prevList) => {
+      const newList = [...prevList];
+      newList.splice(index, 0, { value: inputValue, next: null });
+      return newList;
+    });
+    setInputValue("");
+    setInsertIndex("");
+    setMessage(`Added ${inputValue} at index ${index}.`);
+  }, [inputValue, insertIndex, list.length]);
 
   const removeFromFront = useCallback(() => {
     if (list.length === 0) {
@@ -84,6 +105,13 @@ const LinkedlistGraphicalRepresentation = () => {
           className="border-2 border-blue-300 rounded px-2 py-1"
           placeholder="Enter value"
         />
+        <input
+          type="number"
+          value={insertIndex}
+          onChange={(e) => setInsertIndex(e.target.value)}
+          className="border-2 border-blue-300 rounded px-2 py-1 w-20"
+          placeholder="Index"
+        />
         <button
           onClick={addToFront}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -95,6 +123,12 @@ const LinkedlistGraphicalRepresentation = () => {
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
         >
           Add to End
+        </button>
+        <button
+          onClick={addAtIndex}
+          className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Add at Index
         </button>
         <button
           onClick={removeFromFront}
