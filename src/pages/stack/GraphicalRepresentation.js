@@ -5,7 +5,7 @@ const StackGraphicalRepresentation = () => {
   const [inputValue, setInputValue] = useState("");
   const [message, setMessage] = useState("");
 
-  const MAX_STACK_SIZE = 5;
+  const MAX_STACK_SIZE = 15;
 
   const push = useCallback(() => {
     if (stack.length >= MAX_STACK_SIZE) {
