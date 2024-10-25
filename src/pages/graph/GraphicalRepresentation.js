@@ -1,20 +1,11 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import graphExamples from "../../data/graphExamples.json";
 
 const GraphGraphicalRepresentation = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [currentGraphIndex, setCurrentGraphIndex] = useState(0);
-  const [isTraversalComplete, setIsTraversalComplete] = useState(false);
 
   const currentExample = graphExamples[currentGraphIndex];
-
-  useEffect(() => {
-    if (currentStep === currentExample.bfsSteps.length - 1) {
-      setIsTraversalComplete(true);
-    } else {
-      setIsTraversalComplete(false);
-    }
-  }, [currentStep, currentExample.bfsSteps.length]);
 
   const drawGraph = useCallback(() => {
     const currentBfsStep = currentExample.bfsSteps[currentStep];
@@ -65,13 +56,10 @@ const GraphGraphicalRepresentation = () => {
     );
   }, [currentExample, currentStep]);
 
-  const refreshGraph = () => {
+  const nextGraph = () => {
     setCurrentGraphIndex((prevIndex) => (prevIndex + 1) % graphExamples.length);
     setCurrentStep(0);
-    setIsTraversalComplete(false);
   };
-
-  const isQueueEmpty = currentExample.bfsSteps[currentStep].queue.length === 0;
 
   return (
     <div className="p-8 bg-gradient-to-br from-blue-50 to-sky-100 rounded-xl shadow-lg font-poppins max-w-4xl mx-auto my-8">
@@ -80,39 +68,35 @@ const GraphGraphicalRepresentation = () => {
       </h2>
       <p className="text-lg text-gray-700 mb-4">
         This visualization shows how Breadth-First Search (BFS) traverses a
-        graph step by step.
+        graph step by step, starting from node 'A'.
       </p>
       <div className="mb-4 bg-white p-4 rounded-lg shadow-inner">
         {drawGraph()}
       </div>
       <div className="mb-4 flex justify-between">
-        <div>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
-            onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
-            disabled={currentStep === 0}
-          >
-            Previous Step
-          </button>
-          {!isQueueEmpty && (
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={() =>
-                setCurrentStep(
-                  Math.min(currentExample.bfsSteps.length - 1, currentStep + 1)
-                )
-              }
-              disabled={currentStep === currentExample.bfsSteps.length - 1}
-            >
-              Next Step
-            </button>
-          )}
-        </div>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+          onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+          disabled={currentStep === 0}
+        >
+          Previous Step
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+          onClick={() =>
+            setCurrentStep(
+              Math.min(currentExample.bfsSteps.length - 1, currentStep + 1)
+            )
+          }
+          disabled={currentStep === currentExample.bfsSteps.length - 1}
+        >
+          Next Step
+        </button>
         <button
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          onClick={refreshGraph}
+          onClick={nextGraph}
         >
-          Refresh Graph
+          Next Graph
         </button>
       </div>
       <div className="text-lg text-gray-700">
@@ -120,12 +104,26 @@ const GraphGraphicalRepresentation = () => {
         <p>
           Visited: {currentExample.bfsSteps[currentStep].visited.join(", ")}
         </p>
-        {currentExample.bfsSteps[currentStep].queue.length > 0 && (
-          <p>Queue: {currentExample.bfsSteps[currentStep].queue.join(", ")}</p>
-        )}
-        {isTraversalComplete && (
+        <p>Queue: {currentExample.bfsSteps[currentStep].queue.join(", ")}</p>
+        <div className="mt-4">
+          {currentExample.bfsSteps.map((step, index) => (
+            <p
+              key={index}
+              className={`mb-2 ${
+                index < currentStep
+                  ? "text-gray-400"
+                  : index === currentStep
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-600"
+              }`}
+            >
+              {step.description}
+            </p>
+          ))}
+        </div>
+        {currentStep === currentExample.bfsSteps.length - 1 && (
           <p className="mt-4 text-green-600 font-bold">
-            Graph traversal is complete!
+            BFS traversal is complete!
           </p>
         )}
       </div>
